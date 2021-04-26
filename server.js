@@ -4,6 +4,9 @@ const cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
+//router
+const userRouter = require('./routes/userRoutes')
+
 const port = process.env.PORT || 4000;
 const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.g1juc.mongodb.net/${process.env.DB_DB}?retryWrites=true&w=majority`
 
@@ -14,6 +17,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 require('dotenv').config();
+
+app.use('api/users/', userRouter)
 
 
 app.get('/',(req,res)=>{
