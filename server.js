@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-require('dotenv').config()
+require('dotenv').config();
 
 
 app.get('/',(req,res)=>{
