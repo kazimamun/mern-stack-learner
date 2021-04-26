@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 require('dotenv').config();
 
-app.use('api/users/', userRouter)
+app.use('/api/users/', userRouter)
 
 
 app.get('/',(req,res)=>{
