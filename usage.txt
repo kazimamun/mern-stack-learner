@@ -1,0 +1,2 @@
+for start just type on command panel : npm run dev
+concurrently tools used for start server & client at same time. just see packages.json of both files
